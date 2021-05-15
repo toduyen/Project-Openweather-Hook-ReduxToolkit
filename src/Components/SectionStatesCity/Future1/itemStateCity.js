@@ -50,13 +50,12 @@ function ItemStateCity() {
     }
     return (
         <>
-                 <ColStyle xl="6">
-                <Heading className="d-flex justify-content-center">{ketqua2 === "Thanh cong" ? renderCity() : "loading"}, {ketqua2 === "Thanh cong" ?  renderContry() : "loading"}</Heading>
-                <DescriptionHeading className="display-6 d-flex justify-content-end">{ngaythangnam()}</DescriptionHeading>
-                <DescriptionHeading2 className="display-6 d-flex justify-content-end">Đã thiết lập tự động cập nhật 30 phút</DescriptionHeading2>
+                 <ColStyle sm={{ size: 6, order: 2, offset: 1 }}>
+                <Heading>{ketqua2 === "Thanh cong" ? renderCity() : "loading"}, {ketqua2 === "Thanh cong" ?  renderContry() : "loading"}</Heading>
                 </ColStyle>
-                <ColStyle2 xl="6">
-              
+                <ColStyle2 sm={{ size: 6, order: 2, offset: 1 }}>
+                <DescriptionHeading className="display-6">{ngaythangnam()}</DescriptionHeading>
+                <DescriptionHeading2 className="display-6">Đã thiết lập tự động cập nhật 30 phút</DescriptionHeading2>
                 </ColStyle2>
         </>
     )
