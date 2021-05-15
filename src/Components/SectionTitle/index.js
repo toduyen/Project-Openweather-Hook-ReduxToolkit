@@ -55,7 +55,7 @@ function Title() {
                 <Row style={{paddingTop: 50}} className="d-flex justify-content-center">
                 <Col sm="12" xl="3" className="d-flex justify-content-end pt-3 pb-3 rounded">
                     <div className="imageIcon">
-                       <img src={ketqua2 === "Thanh cong" ? `http://openweathermap.org/img/wn/${ketqua.weather[0].icon}.png` : `http://openweathermap.org/img/wn/02d.png`} style={{width: 150}} alt="icon"/>
+                       <img src={ketqua2 === "Thanh cong" ? `https://openweathermap.org/img/wn/${ketqua.weather[0].icon}.png` : `http://openweathermap.org/img/wn/02d.png`} style={{width: 150}} alt="icon"/>
                     </div>
                 </Col>
                 <Col sm="12" xl="3" className="d-flex justify-content-start pt-4 pb-3 rounded">

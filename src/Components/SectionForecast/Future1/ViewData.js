@@ -29,7 +29,7 @@ function ViewData({giatri}) {
                         <Temp2 style={{textAlign: 'center'}}>{renderDay(0)}</Temp2>
                         <Temp3 style={{textAlign: 'center'}}>{renderDay(2)}</Temp3>
                         <DesTemp2 className="display-6" style={{textAlign: 'center'}}>
-                        <img src={`http://openweathermap.org/img/wn/${giatri.weather[0].icon}.png`} style={{width: 50}} alt="icon"/>
+                        <img src={`https://openweathermap.org/img/wn/${giatri.weather[0].icon}.png`} style={{width: 50}} alt="icon"/>
                         </DesTemp2>
                         <Temp3 style={{textAlign: 'center'}}>{Math.round(giatri.main.temp)}&#8451;</Temp3>
                     </div>
