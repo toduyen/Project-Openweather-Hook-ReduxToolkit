@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import {Row} from 'reactstrap';
 import ItemStateCity from './Future1/itemStateCity';
 import {getData,getAqi} from '../../Api/GlobalApi';
+import ItemStateUv from './Future1/itemStateUv';
 
 function Statecity() {
     const dauInput = useSelector(state => state.search.value);
@@ -15,6 +16,7 @@ function Statecity() {
         <>
                 <Row>
                 <ItemStateCity/>
+                <ItemStateUv/>
                 </Row>
         </>
     )
