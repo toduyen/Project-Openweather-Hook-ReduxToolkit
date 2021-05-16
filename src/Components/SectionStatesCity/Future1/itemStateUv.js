@@ -78,9 +78,10 @@ function ItemStateUv() {
           }
         }
     }
+    console.log(ketqua33);
     return (
         <>
-              <ColStyle2 xl="4">
+              <ColStyle2 xl="4" sm="6">
                     <Heading className="d-flex justify-content-start mt-4">{ketqua3 === "thanhcong" ? "UV:"+ renderUvIndex() : "loading"}</Heading>
                     <DescriptionHeading3 className="display-6 display-6 d-flex justify-content-center mt-1">{ketqua3 === "thanhcong" ?"Hãy mang: " + renderAws() : "loading"}</DescriptionHeading3>
                 </ColStyle2>

@@ -53,12 +53,12 @@ function Title() {
         {
             return(
                 <Row style={{paddingTop: 50}} className="d-flex justify-content-center">
-                <Col xl="3" className="d-flex justify-content-end pt-3 pb-3 rounded">
+                <Col xl="3" sm="6" className="d-flex justify-content-end pt-3 pb-3">
                     <div className="imageIcon">
                        <img src={ketqua2 === "Thanh cong" ? `https://openweathermap.org/img/wn/${ketqua.weather[0].icon}.png` : `http://openweathermap.org/img/wn/02d.png`} style={{width: 150}} alt="icon"/>
                     </div>
                 </Col>
-                <Col xl="3" className="d-flex justify-content-start pt-4 pb-3 rounded">
+                <Col xl="3" sm="6" className="d-flex justify-content-start pt-4 pb-3 rounded">
                     <div>
                         <Temp>{ketqua2 === "Thanh cong" ? Math.round(ketqua.main.temp) : "loading"}&#8451;</Temp>
                         <DesTemp className="display-6">{ketqua2 === "Thanh cong" ? ketqua.weather[0].description : "loading"}</DesTemp>
