@@ -78,7 +78,6 @@ function ItemStateUv() {
           }
         }
     }
-    console.log(ketqua33);
     return (
         <>
               <ColStyle2 xl="4" sm="6">
