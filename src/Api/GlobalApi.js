@@ -7,13 +7,11 @@ export const getData = createAsyncThunk('callApi',
             console.log('error');
         })
 })
-
 export const getDataFiveDay = createAsyncThunk('callApi2', async ({local}) => {
     return fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${local}&units=metric&appid=84f0c05e16abc57b03ca8fa00b59f78e`).then((res) => res.json()).catch(function() {
       console.log("error");
   });
 })
-
 export const getAqi = createAsyncThunk('callApi3', async ({local}) => {
     return fetch(`https://api.waqi.info/feed/${local}/?token=b87f62ff48e79d6ac2ba6d7b42d049612d696469`).then((res) => res.json()).catch(function(){
         console.log("error");
