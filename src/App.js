@@ -5,6 +5,7 @@ import Styled from 'styled-components';
 import Statecity from './Components/SectionStatesCity';
 import Title from './Components/SectionTitle';
 import Forecase from './Components/SectionForecast';
+import AQiIndexVier from './Components/SectionAQI';
 const DivStyled = Styled.div `
 background-image: url(${process.env.PUBLIC_URL + '/2850815.jpg'});
 /* Center and scale the image nicely */
@@ -21,6 +22,7 @@ function App() {
      <Statecity/>
      <Title/>
      <Forecase/>
+     <AQiIndexVier/>
      </Container>
     </DivStyled>
   );

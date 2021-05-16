@@ -24,7 +24,7 @@ function Forecase() {
                  <h4 className="headerTitle"><Heading color="secondary">Forecast</Heading></h4>
                 </Col>
             </Row>
-            <Row style={{paddingBottom: 120}}>
+            <Row style={{paddingBottom: 40}}>
                 <ForecaseItem/>
             </Row>
         </>
