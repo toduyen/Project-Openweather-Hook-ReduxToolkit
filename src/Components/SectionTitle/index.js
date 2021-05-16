@@ -53,19 +53,19 @@ function Title() {
         {
             return(
                 <Row style={{paddingTop: 50}} className="d-flex justify-content-center">
-                <Col sm="12" xl="3" className="d-flex justify-content-end pt-3 pb-3 rounded">
+                <Col xl="3" className="d-flex justify-content-end pt-3 pb-3 rounded">
                     <div className="imageIcon">
                        <img src={ketqua2 === "Thanh cong" ? `https://openweathermap.org/img/wn/${ketqua.weather[0].icon}.png` : `http://openweathermap.org/img/wn/02d.png`} style={{width: 150}} alt="icon"/>
                     </div>
                 </Col>
-                <Col sm="12" xl="3" className="d-flex justify-content-start pt-4 pb-3 rounded">
+                <Col xl="3" className="d-flex justify-content-start pt-4 pb-3 rounded">
                     <div>
                         <Temp>{ketqua2 === "Thanh cong" ? Math.round(ketqua.main.temp) : "loading"}&#8451;</Temp>
                         <DesTemp className="display-6">{ketqua2 === "Thanh cong" ? ketqua.weather[0].description : "loading"}</DesTemp>
                     </div>
                 </Col>
                 
-                <SetBackgroud sm="12" xl="2" className="d-flex justify-content-center pt-3 pb-3 rounded" >
+                <SetBackgroud xl="2" className="d-flex justify-content-center pt-3 pb-3 rounded" >
                     <div>
                         <Temp2 style={{textAlign: 'center'}}>
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" className="bi bi-thermometer-high" viewBox="0 0 18 18">
@@ -86,7 +86,7 @@ function Title() {
                         <DesTemp2 className="display-6" style={{textAlign: 'center'}}>Low</DesTemp2>
                     </div>
                 </SetBackgroud>
-                <SetBackgroud sm="12" xl="2" className="d-flex justify-content-center pt-3 pb-3 rounded">
+                <SetBackgroud xl="2" className="d-flex justify-content-center pt-3 pb-3 rounded">
                     <div>
                         <Temp2 style={{textAlign: 'center'}}>
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" className="bi bi-wind" viewBox="0 0 18 18">
@@ -105,7 +105,7 @@ function Title() {
                         <DesTemp2 className="display-6" style={{textAlign: 'center'}}>Rain</DesTemp2>
                     </div>
                 </SetBackgroud>
-                <SetBackgroud sm="12" xl="2" className="d-flex justify-content-center pt-3 pb-3 rounded" >
+                <SetBackgroud xl="2" className="d-flex justify-content-center pt-3 pb-3 rounded" >
                     <div>
                         <Temp2 style={{textAlign: 'center'}}>
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" className="bi bi-sunrise" viewBox="0 0 18 18">
