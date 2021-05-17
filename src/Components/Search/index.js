@@ -2,7 +2,7 @@ import React, { useCallback,useEffect,useState } from 'react'
 import { useDispatch } from 'react-redux';
 import {Row, Col, InputGroup, Input, Button } from 'reactstrap';
 import {inputDataSearch} from './Future1/searchSlice';
-import {getData} from '../../Api/GlobalApi';
+import {getData,getAqi} from '../../Api/GlobalApi';
 import styled from 'styled-components';
 const InputLocalGroup = styled(InputGroup) `
 width: 40%;
@@ -26,7 +26,8 @@ function Search() {
         if(kiemtra)
         {
             const Auto = setInterval(()=>{
-            dispatch(getData({local: JSON.parse(localStorage.getItem('weather'))}))
+            dispatch(getData({local: JSON.parse(localStorage.getItem('weather'))}));
+            dispatch(getAqi({local: JSON.parse(localStorage.getItem('weather'))}));
             },1800000);
             setInputData(JSON.parse(kiemtra))
             return () => clearInterval(Auto);
