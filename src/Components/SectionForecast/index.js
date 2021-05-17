@@ -19,7 +19,7 @@ function Forecase() {
     }, [dispatch,ketquatimkiem])
     return (
         <>
-            <Row  style={{paddingTop: 50}}>
+            <Row>
                 <Col xl="2" className="d-flex justify-content-start rounded">
                  <h4 className="headerTitle"><Heading color="secondary">Forecast</Heading></h4>
                 </Col>
