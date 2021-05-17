@@ -19,7 +19,7 @@ function ItemStateUv() {
     const renderUvIndex = () => {
         if(ketqua33.data==="Unknown station")
         {
-            return('Unknown station');
+            return null;
         }else{
            try{
             switch (ketqua33.data.forecast.daily.uvi[2].max) {
@@ -43,38 +43,38 @@ function ItemStateUv() {
             }
            }
            catch(error){
-               return('Unknown station');
+               return('No support city');
            }
         }
     }
     const renderAws = () => {
         if(ketqua33.data==="Unknown station")
         {
-            return('Unknown station');
+            return null;
         }else{
           try{
             switch (ketqua33.data.forecast.daily.uvi[2].max) {
                 case 1:
                 case 2:
-                    return('ô nhỏ');
+                    return('Hãy mang: ô nhỏ');
                 case 3:
                 case 4:
                 case 5:
-                    return('áo chống nắng, kính dâm, Kem chống nắng');
+                    return('Hãy mang: áo chống nắng, kính dâm, Kem chống nắng');
                 case 6:
                 case 7:
-                    return('áo chống nắng, kính dâm, Kem chống nắng, Hạn chế tiếp xúc dưới nắng');
+                    return('Hãy mang: áo chống nắng, kính dâm, Kem chống nắng, Hạn chế tiếp xúc dưới nắng');
                 case 8:
                 case 9:
                 case 10:
                 case 11:
-                    return('áo chống nắng, kính dâm, Kem chống nắng, Không nên ra ngoài lúc này');
+                    return('Hãy mang: áo chống nắng, kính dâm, Kem chống nắng, Không nên ra ngoài lúc này');
                 default:
                     return null;
             }
           }
           catch(error){
-              return("Unknown station");
+              return null;
           }
         }
     }
@@ -82,7 +82,7 @@ function ItemStateUv() {
         <>
               <ColStyle2 xl="4" sm="6">
                     <Heading className="d-flex justify-content-start mt-4">{ketqua3 === "thanhcong" ? "UV:"+ renderUvIndex() : "loading"}</Heading>
-                    <DescriptionHeading3 className="display-6 display-6 d-flex justify-content-center mt-1">{ketqua3 === "thanhcong" ?"Hãy mang: " + renderAws() : "loading"}</DescriptionHeading3>
+                    <DescriptionHeading3 className="display-6 display-6 d-flex justify-content-center mt-1">{ketqua3 === "thanhcong" ? renderAws() : "loading"}</DescriptionHeading3>
                 </ColStyle2>
         </>
     )
