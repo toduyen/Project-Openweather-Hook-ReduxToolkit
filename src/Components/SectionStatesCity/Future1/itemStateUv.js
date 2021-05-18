@@ -19,25 +19,25 @@ function ItemStateUv() {
     const renderUvIndex = () => {
         if(ketqua33.data==="Unknown station")
         {
-            return null;
+            return ('No support city');
         }else{
            try{
             switch (ketqua33.data.forecast.daily.uvi[2].max) {
                 case 1:
                 case 2:
-                    return(ketqua33.data.forecast.daily.uvi[2].max + " (thấp)");
+                    return(ketqua33.data.forecast.daily.uvi[2].max);
                 case 3:
                 case 4:
                 case 5:
-                    return(ketqua33.data.forecast.daily.uvi[2].max + " (trung bình)");
+                    return(ketqua33.data.forecast.daily.uvi[2].max);
                 case 6:
                 case 7:
-                    return(ketqua33.data.forecast.daily.uvi[2].max + " (cao)");
+                    return(ketqua33.data.forecast.daily.uvi[2].max);
                 case 8:
                 case 9:
                 case 10:
                 case 11:
-                    return(ketqua33.data.forecast.daily.uvi[2].max + " (rất cao)");
+                    return(ketqua33.data.forecast.daily.uvi[2].max);
                 default:
                     return null;
             }
@@ -56,19 +56,19 @@ function ItemStateUv() {
             switch (ketqua33.data.forecast.daily.uvi[2].max) {
                 case 1:
                 case 2:
-                    return('Hãy mang: ô nhỏ');
+                    return('Hãy mang: ô nhỏ. Tia uv ở mức thấp');
                 case 3:
                 case 4:
                 case 5:
-                    return('Hãy mang: áo chống nắng, kính dâm, Kem chống nắng');
+                    return('Hãy mang: áo chống nắng, kính dâm, Kem chống nắng. Tia uv ở mức trunh bình');
                 case 6:
                 case 7:
-                    return('Hãy mang: áo chống nắng, kính dâm, Kem chống nắng, Hạn chế tiếp xúc dưới nắng');
+                    return('Hãy mang: áo chống nắng, kính dâm, Kem chống nắng, Hạn chế tiếp xúc dưới nắng. Tia uv ở mức cao');
                 case 8:
                 case 9:
                 case 10:
                 case 11:
-                    return('Hãy mang: áo chống nắng, kính dâm, Kem chống nắng, Không nên ra ngoài lúc này');
+                    return('Hãy mang: áo chống nắng, kính dâm, Kem chống nắng, Không nên ra ngoài lúc này. Tia uv ở mức rất cao');
                 default:
                     return null;
             }

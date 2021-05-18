@@ -20,7 +20,7 @@ function descriptionAQI({ketquaAQI,trangthai}) {
                     case (0 <= AqiCN) && (AqiCN <= 50):
                         return(
                            <>
-                                <Col xl="1"  sm="4" className="d-flex justify-content-center pt-3 pb-3" style={{backgroundColor: "#87c13c"}}>
+                                <Col xl="1"  sm="4" className="d-flex align-items-center  col-4" style={{backgroundColor: "#87c13c"}}>
                                     <div>
                                         <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 48 48">
                                             <g fill="none">
@@ -34,7 +34,7 @@ function descriptionAQI({ketquaAQI,trangthai}) {
                                         </svg>
                                     </div>
                                 </Col>
-                                <Col xl="3"  sm="4" className="d-flex justify-content-center pt-3 pb-3" style={{backgroundColor: "rgb(168 224 95 / 63%)"}}>
+                                <Col xl="3"  sm="4" className="d-flex align-items-center  col-4" style={{backgroundColor: "rgb(168 224 95 / 63%)"}}>
                                     <div>
                                         <Temp3 className="display-6" style={{textAlign: 'center'}}>
                                             {AqiCN}
@@ -44,7 +44,7 @@ function descriptionAQI({ketquaAQI,trangthai}) {
                                         </DesTemp2>
                                     </div>
                                 </Col>
-                                <Col xl="2"  sm="4" className="d-flex justify-content-center pt-4" style={{backgroundColor: "rgb(168 224 95 / 63%)"}}>
+                                <Col xl="1"  sm="4" className="d-flex align-items-center col-4" style={{backgroundColor: "rgb(168 224 95 / 63%)"}}>
                                     <div>
                                         <DesTemp2 className="display-6" style={{textAlign: 'center'}}>
                                             Không khí tốt
@@ -59,7 +59,7 @@ function descriptionAQI({ketquaAQI,trangthai}) {
                     case (51 <= AqiCN) && (AqiCN <= 100):
                         return(
                            <>
-                                <Col xl="1"  sm="4" className="d-flex justify-content-center pt-4 pb-3" style={{backgroundColor: "#efbe1d"}}>
+                                <Col xl="1"  sm="4" className="d-flex align-items-center  col-4" style={{backgroundColor: "#efbe1d"}}>
                                 <div>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 48 48">
                                         <g fill="none">
@@ -73,7 +73,7 @@ function descriptionAQI({ketquaAQI,trangthai}) {
                                     </svg>
                                 </div>
                                 </Col>
-                                <Col xl="3"  sm="4" className="d-flex justify-content-center pt-3 pb-3" style={{backgroundColor: "rgb(253 214 75 / 63%)"}}>
+                                <Col xl="3"  sm="4" className="d-flex align-items-center col-4" style={{backgroundColor: "rgb(253 214 75 / 63%)"}}>
                                     <div>
                                         <Temp3 className="display-6" style={{textAlign: 'center'}}>
                                             {AqiCN}
@@ -83,7 +83,7 @@ function descriptionAQI({ketquaAQI,trangthai}) {
                                         </DesTemp2>
                                     </div>
                                 </Col>
-                                <Col xl="2"  sm="4" className="d-flex justify-content-center pt-4" style={{backgroundColor: "rgb(253 214 75 / 63%)"}}>
+                                <Col xl="1"  sm="4" className="d-flex align-items-center col-4" style={{backgroundColor: "rgb(253 214 75 / 63%)"}}>
                                     <div>
                                         <DesTemp2 className="display-6" style={{textAlign: 'center'}}>
                                             Không khí trung bình
@@ -98,7 +98,7 @@ function descriptionAQI({ketquaAQI,trangthai}) {
                     case (101<=AqiCN) && (AqiCN<=150):
                         return(
                                 <>
-                                      <Col xl="1" sm="4" className="d-flex justify-content-center pt-3 pb-3 col-4" style={{backgroundColor: "#f27e2f"}}>
+                                      <Col xl="1" sm="4" className="d-flex align-items-center col-4" style={{backgroundColor: "#f27e2f"}}>
                                         <div>
                                             <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 48 48">
                                                 <g fill="none">
@@ -111,7 +111,7 @@ function descriptionAQI({ketquaAQI,trangthai}) {
                                             </svg>
                                         </div>
                                     </Col>
-                                    <Col xl="3"  sm="4" className="d-flex justify-content-center pt-3 pb-3 col-4" style={{backgroundColor: "rgb(255 155 87 / 63%)"}}>
+                                    <Col xl="3"  sm="4" className="d-flex align-items-center col-4" style={{backgroundColor: "rgb(255 155 87 / 63%)"}}>
                                     <div>
                                         <Temp3 className="display-6" style={{textAlign: 'center'}}>
                                             {AqiCN}
@@ -121,7 +121,7 @@ function descriptionAQI({ketquaAQI,trangthai}) {
                                         </DesTemp2>
                                     </div>
                                     </Col>
-                                    <Col xl="2"  sm="4" className="d-flex justify-content-center pt-4 col-4" style={{backgroundColor: "rgb(255 155 87 / 63%)"}}>
+                                    <Col xl="1"  sm="4" className="d-flex align-items-center col-4" style={{backgroundColor: "rgb(255 155 87 / 63%)"}}>
                                         <div>
                                             <DesTemp2 className="display-6" style={{textAlign: 'center'}}>
                                                 Không lành mạnh cho nhóm người nhạy cảm
@@ -136,7 +136,7 @@ function descriptionAQI({ketquaAQI,trangthai}) {
                     case (151<=AqiCN) && (AqiCN<=200):
                         return(
                             <>
-                                     <Col xl="1"  sm="4" className="d-flex justify-content-center pt-3 pb-3" style={{backgroundColor: "#e84b50"}}>
+                                     <Col xl="1"  sm="4" className="d-flex align-items-center col-4" style={{backgroundColor: "#e84b50"}}>
                                         <div>
                                             <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 48 48">
                                                 <g fill="none">
@@ -149,7 +149,7 @@ function descriptionAQI({ketquaAQI,trangthai}) {
                                             </svg>
                                         </div>
                                         </Col>
-                                        <Col xl="3"  sm="4" className="d-flex justify-content-center pt-3 pb-3" style={{backgroundColor: "#fe6a6982"}}>
+                                        <Col xl="3"  sm="4" className="d-flex align-items-center col-4" style={{backgroundColor: "#fe6a6982"}}>
                                         <div>
                                             <Temp3 className="display-6" style={{textAlign: 'center'}}>
                                                 {AqiCN}
@@ -159,7 +159,7 @@ function descriptionAQI({ketquaAQI,trangthai}) {
                                             </DesTemp2>
                                         </div>
                                     </Col>
-                                    <Col xl="2"  sm="4" className="d-flex justify-content-center pt-4" style={{backgroundColor: "#fe6a6982"}}>
+                                    <Col xl="1"  sm="4" className="d-flex align-items-center col-4" style={{backgroundColor: "#fe6a6982"}}>
                                         <div>
                                             <DesTemp2 className="display-6" style={{textAlign: 'center'}}>
                                                 Có hại cho sức khỏe
@@ -174,7 +174,7 @@ function descriptionAQI({ketquaAQI,trangthai}) {
                     case (201<=AqiCN) && (AqiCN<=300):
                         return(  
                             <>
-                                      <Col xl="1"  sm="4" className="d-flex justify-content-center pt-3 pb-3" style={{backgroundColor: "#a87383"}}>
+                                      <Col xl="1"  sm="4" className="d-flex align-items-center col-4" style={{backgroundColor: "#a87383"}}>
                                         <div>
                                             <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 48 48">
                                                 <g fill="none">
@@ -189,7 +189,7 @@ function descriptionAQI({ketquaAQI,trangthai}) {
                                             </svg>
                                         </div>
                                         </Col>
-                                        <Col xl="3"  sm="4" className="d-flex justify-content-center pt-3 pb-3" style={{backgroundColor: "#a97abc8a"}}>
+                                        <Col xl="3"  sm="4" className="d-flex align-items-center col-4" style={{backgroundColor: "#a97abc8a"}}>
                                         <div>
                                             <Temp3 className="display-6" style={{textAlign: 'center'}}>
                                                 {AqiCN}
@@ -199,7 +199,7 @@ function descriptionAQI({ketquaAQI,trangthai}) {
                                             </DesTemp2>
                                         </div>
                                     </Col>
-                                    <Col xl="2"  sm="4" className="d-flex justify-content-center pt-4" style={{backgroundColor: "#a97abc8a"}}>
+                                    <Col xl="1"  sm="4" className="d-flex align-items-center col-4" style={{backgroundColor: "#a97abc8a"}}>
                                         <div>
                                             <DesTemp2 className="display-6" style={{textAlign: 'center'}}>
                                                 Rất có hại cho sức khỏe
@@ -214,7 +214,7 @@ function descriptionAQI({ketquaAQI,trangthai}) {
                     case (301<=AqiCN) && (AqiCN<=500):
                         return(  
                             <>
-                                     <Col xl="1"  sm="4" className="d-flex justify-content-center pt-3 pb-3" style={{backgroundColor: "#915c6c"}}>
+                                     <Col xl="1"  sm="4" className="d-flex align-items-center col-4" style={{backgroundColor: "#915c6c"}}>
                                         <div>
                                             <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 48 48">
                                                 <g fill="none">
@@ -227,7 +227,7 @@ function descriptionAQI({ketquaAQI,trangthai}) {
                                             </svg>
                                         </div>
                                     </Col>
-                                    <Col xl="3"  sm="4" className="d-flex justify-content-center pt-3 pb-3" style={{backgroundColor: "#a87383b3"}}>
+                                    <Col xl="3"  sm="4" className="d-flex align-items-center col-4" style={{backgroundColor: "#a87383b3"}}>
                                         <div>
                                             <Temp3 className="display-6" style={{textAlign: 'center'}}>
                                                 {AqiCN}
@@ -237,7 +237,7 @@ function descriptionAQI({ketquaAQI,trangthai}) {
                                             </DesTemp2>
                                         </div>
                                     </Col>
-                                    <Col xl="2"  sm="4" className="d-flex justify-content-center pt-4" style={{backgroundColor: "#a87383b3"}}>
+                                    <Col xl="1"  sm="4" className="d-flex align-items-center col-4" style={{backgroundColor: "#a87383b3"}}>
                                         <div>
                                             <DesTemp2 className="display-6" style={{textAlign: 'center'}}>
                                                 Nguy hiểm
