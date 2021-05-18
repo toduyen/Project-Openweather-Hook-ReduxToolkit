@@ -65,7 +65,7 @@ function Title() {
                     </div>
                 </Col>
                 
-                <SetBackgroud xl="2" className="d-flex justify-content-center pt-3 pb-3 rounded" >
+                <SetBackgroud xl="2" sm="4" className="d-flex justify-content-center pt-3 pb-3 rounded" >
                     <div>
                         <Temp2 style={{textAlign: 'center'}}>
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" className="bi bi-thermometer-high" viewBox="0 0 18 18">
@@ -86,7 +86,7 @@ function Title() {
                         <DesTemp2 className="display-6" style={{textAlign: 'center'}}>Low</DesTemp2>
                     </div>
                 </SetBackgroud>
-                <SetBackgroud xl="2" className="d-flex justify-content-center pt-3 pb-3 rounded">
+                <SetBackgroud xl="2" sm="4" className="d-flex justify-content-center pt-3 pb-3 rounded">
                     <div>
                         <Temp2 style={{textAlign: 'center'}}>
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" className="bi bi-wind" viewBox="0 0 18 18">
@@ -105,7 +105,7 @@ function Title() {
                         <DesTemp2 className="display-6" style={{textAlign: 'center'}}>Rain</DesTemp2>
                     </div>
                 </SetBackgroud>
-                <SetBackgroud xl="2" className="d-flex justify-content-center pt-3 pb-3 rounded" >
+                <SetBackgroud xl="2" sm="4" className="d-flex justify-content-center pt-3 pb-3 rounded" >
                     <div>
                         <Temp2 style={{textAlign: 'center'}}>
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" className="bi bi-sunrise" viewBox="0 0 18 18">

@@ -24,7 +24,7 @@ function ViewData({giatri}) {
     }
     return (
         <>
-              <SetBackgroud xl="2" className="d-flex justify-content-center pt-3 pb-3 rounded">
+              <SetBackgroud xl="2" sm="4" className="d-flex justify-content-center pt-3 pb-3 rounded">
                     <div>
                         <Temp2 style={{textAlign: 'center'}}>{renderDay(0)}</Temp2>
                         <Temp3 style={{textAlign: 'center'}}>{renderDay(2)}</Temp3>
