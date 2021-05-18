@@ -98,7 +98,7 @@ function descriptionAQI({ketquaAQI,trangthai}) {
                     case (101<=AqiCN) && (AqiCN<=150):
                         return(
                                 <>
-                                      <Col xl="1" sm="4" className="d-flex justify-content-center pt-3 pb-3" style={{backgroundColor: "#f27e2f"}}>
+                                      <Col xl="1" sm="4" className="d-flex justify-content-center pt-3 pb-3 col-4" style={{backgroundColor: "#f27e2f"}}>
                                         <div>
                                             <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 48 48">
                                                 <g fill="none">
@@ -111,7 +111,7 @@ function descriptionAQI({ketquaAQI,trangthai}) {
                                             </svg>
                                         </div>
                                     </Col>
-                                    <Col xl="3"  sm="4" className="d-flex justify-content-center pt-3 pb-3" style={{backgroundColor: "rgb(255 155 87 / 63%)"}}>
+                                    <Col xl="3"  sm="4" className="d-flex justify-content-center pt-3 pb-3 col-4" style={{backgroundColor: "rgb(255 155 87 / 63%)"}}>
                                     <div>
                                         <Temp3 className="display-6" style={{textAlign: 'center'}}>
                                             {AqiCN}
@@ -121,7 +121,7 @@ function descriptionAQI({ketquaAQI,trangthai}) {
                                         </DesTemp2>
                                     </div>
                                     </Col>
-                                    <Col xl="2"  sm="4" className="d-flex justify-content-center pt-4" style={{backgroundColor: "rgb(255 155 87 / 63%)"}}>
+                                    <Col xl="2"  sm="4" className="d-flex justify-content-center pt-4 col-4" style={{backgroundColor: "rgb(255 155 87 / 63%)"}}>
                                         <div>
                                             <DesTemp2 className="display-6" style={{textAlign: 'center'}}>
                                                 Không lành mạnh cho nhóm người nhạy cảm
