@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import {Row} from 'reactstrap';
-import ItemStateCity from './Future1/itemStateCity';
+import ItemStateCity from './Future/itemStateCity';
 import {getData,getAqi} from '../../Api/GlobalApi';
-import ItemStateUv from './Future1/itemStateUv';
+import ItemStateUv from './Future/itemStateUv';
 
 function Statecity() {
     const dauInput = useSelector(state => state.search.value);

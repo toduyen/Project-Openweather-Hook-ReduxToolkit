@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import {Row , Col, Badge } from 'reactstrap';
 import styled from 'styled-components';
-import ForecaseItem from './Future1/forecaseItem';
+import ForecaseItem from './Future/forecaseItem';
 import {getDataFiveDay} from '../../Api/GlobalApi';
 const Heading = styled(Badge) `
 font-weight: 500;

@@ -2,7 +2,7 @@ import React from 'react'
 import { useSelector } from 'react-redux';
 import {Row , Col, Badge } from 'reactstrap';
 import styled from 'styled-components';
-import DescriptionAQI from './Future1/descriptionAQI';
+import DescriptionAQI from './Future/descriptionAQI';
 const Heading = styled(Badge) `
 font-weight: 500;
 `;

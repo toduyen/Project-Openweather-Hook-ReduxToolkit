@@ -1,7 +1,7 @@
 import React, { useCallback,useEffect,useState } from 'react'
 import { useDispatch } from 'react-redux';
 import {Row, Col, InputGroup, Input, Button } from 'reactstrap';
-import {inputDataSearch} from './Future1/searchSlice';
+import {inputDataSearch} from './Future/searchSlice';
 import {getData,getAqi} from '../../Api/GlobalApi';
 import styled from 'styled-components';
 const InputLocalGroup = styled(InputGroup) `
