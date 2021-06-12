@@ -6,7 +6,7 @@ import Statecity from './Components/SectionStatesCity';
 import Title from './Components/SectionTitle';
 import Forecase from './Components/SectionForecast';
 import AQiIndexVier from './Components/SectionAQI';
-const DivStyled = Styled.div `
+const DivStyled = Styled.div`
 background-image: url(${process.env.PUBLIC_URL + '/2850815.jpg'});
 /* Center and scale the image nicely */
 background-position: center;
@@ -15,15 +15,15 @@ background-size: cover;
 `;
 function App() {
   return (
-     <DivStyled>
-     <Container className="themed-container">
-     <Header/>
-     <Search/>
-     <Statecity/>
-     <Title/>
-     <Forecase/>
-     <AQiIndexVier/>
-     </Container>
+    <DivStyled>
+      <Container className="themed-container">
+        <Header />
+        <Search />
+        <Statecity />
+        <Title />
+        <Forecase />
+        <AQiIndexVier />
+      </Container>
     </DivStyled>
   );
 }
