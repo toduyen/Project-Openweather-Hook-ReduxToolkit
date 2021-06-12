@@ -16,7 +16,6 @@ font-size: 50px;
 function ItemStateUv() {
   const ketqua3 = useSelector(state => state.GlobalApi.status3);
   const ketqua33 = useSelector(state => state.GlobalApi.value3);
-  console.log(ketqua33);
   const renderUvIndex = () => {
     if (ketqua33.data === "Unknown station") {
       return ('');
