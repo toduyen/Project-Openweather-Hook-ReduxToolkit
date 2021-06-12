@@ -19,31 +19,31 @@ function ItemStateUv() {
   console.log(ketqua33);
   const renderUvIndex = () => {
     if (ketqua33.data === "Unknown station") {
-      return ('No support city');
+      return ('');
     } else {
       try {
         switch (ketqua33.data.forecast.daily.uvi[2].max) {
           case 1:
           case 2:
-            return (ketqua33.data.forecast.daily.uvi[2].max);
+            return ("UV "+ketqua33.data.forecast.daily.uvi[2].max);
           case 3:
           case 4:
           case 5:
-            return (ketqua33.data.forecast.daily.uvi[2].max);
+            return ("UV "+ketqua33.data.forecast.daily.uvi[2].max);
           case 6:
           case 7:
-            return (ketqua33.data.forecast.daily.uvi[2].max);
+            return ("UV "+ketqua33.data.forecast.daily.uvi[2].max);
           case 8:
           case 9:
           case 10:
           case 11:
-            return (ketqua33.data.forecast.daily.uvi[2].max);
+            return ("UV "+ketqua33.data.forecast.daily.uvi[2].max);
           default:
             return null;
         }
       }
       catch (error) {
-        return ('No support city');
+        return ('');
       }
     }
   }
@@ -80,7 +80,7 @@ function ItemStateUv() {
   return (
     <>
       <ColStyle2 xl="4" sm="6" className="col-6">
-        <Heading className="d-flex justify-content-start mt-4">{ketqua3 === "thanhcong" ? "UV:" + renderUvIndex() : "loading"}</Heading>
+        <Heading className="d-flex justify-content-start mt-4">{ketqua3 === "thanhcong" ? renderUvIndex() : "loading"}</Heading>
         <DescriptionHeading3 className="display-6 display-6 d-flex justify-content-center mt-1">{ketqua3 === "thanhcong" ? renderAws() : "loading"}</DescriptionHeading3>
       </ColStyle2>
     </>
