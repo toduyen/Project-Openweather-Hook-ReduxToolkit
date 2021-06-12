@@ -28,6 +28,7 @@ color: white;
 function ItemStateCity() {
   const ketqua2 = useSelector(state => state.GlobalApi.status);
   const ketqua = useSelector(state => state.GlobalApi.value);
+  const ketqua33 = useSelector(state => state.GlobalApi.value3);
   const renderCity = () => {
     if (String(ketqua.cod) === "200") {
       return (ketqua.name)
