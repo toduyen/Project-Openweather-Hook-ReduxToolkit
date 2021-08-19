@@ -33,7 +33,7 @@ function ItemStateCity() {
       return (ketqua.name)
     }
     else {
-      return ('Oops!');
+      return ('Gõ lại thành phố');
     }
   }
   const renderContry = () => {

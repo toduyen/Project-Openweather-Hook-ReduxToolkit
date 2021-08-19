@@ -19,7 +19,7 @@ border-radius: 25px;
 function Search() {
   const dispatch = useDispatch();
   const [listen, setlisten] = useState('');
-  const [InputData, setInputData] = useState('ha noi');
+  const [InputData, setInputData] = useState('');
   const ListenInput = useCallback((event) => { setlisten(event.target.value) }, []);
   useEffect(() => {
     const kiemtra = localStorage.getItem('weather');
