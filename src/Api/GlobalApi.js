@@ -3,19 +3,25 @@ import { createSlice  , createAsyncThunk} from '@reduxjs/toolkit'
 
 export const getData = createAsyncThunk('callApi', 
     async ({local}) => { 
-        return fetch(`https://api.openweathermap.org/data/2.5/weather?q=${local}&units=metric&appid=${process.env.REACT_APP_OPENWEATHER_KEY}`).then((res) => res.json()).catch(function(){
-            console.log('error');
-        })
+      try{
+        return fetch(`https://api.openweathermap.org/data/2.5/weather?q=${local}&units=metric&appid=${process.env.REACT_APP_OPENWEATHER_KEY}`).then((res) => res.json());
+      }catch(error){
+          console.log(error)
+      }
 })
 export const getDataFiveDay = createAsyncThunk('callApi2', async ({local}) => {
-    return fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${local}&units=metric&appid=${process.env.REACT_APP_OPENWEATHER_KEY}`).then((res) => res.json()).catch(function() {
-      console.log("error");
-  });
+    try{
+        return fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${local}&units=metric&appid=${process.env.REACT_APP_OPENWEATHER_KEY}`).then((res) => res.json());
+    }catch(error){
+         console.log(error);
+    }
 })
 export const getAqi = createAsyncThunk('callApi3', async ({local}) => {
-    return fetch(`https://api.waqi.info/feed/${local}/?token=${process.env.REACT_APP_AQICN_KEY}`).then((res) => res.json()).catch(function(){
-        console.log("error");
-    })
+    try{
+        return fetch(`https://api.waqi.info/feed/${local}/?token=${process.env.REACT_APP_AQICN_KEY}`).then((res) => res.json());
+    }catch(error){
+        console.log(error);
+    }
 })
 
 
