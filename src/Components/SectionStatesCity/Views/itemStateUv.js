@@ -14,29 +14,29 @@ color: white;
 font-size: 50px;
 `;
 function ItemStateUv() {
-  const ketqua3 = useSelector(state => state.GlobalApi.status3);
-  const ketqua33 = useSelector(state => state.GlobalApi.value3);
+  const ketqua3 = useSelector(state => state?.GlobalApi?.status3);
+  const ketqua33 = useSelector(state => state?.GlobalApi?.value3);
   const renderUvIndex = () => {
     if (ketqua33.data === "Unknown station") {
       return ('');
     } else {
       try {
-        switch (ketqua33.data.forecast.daily.uvi[2].max) {
+        switch (ketqua33?.data?.forecast?.daily?.uvi[2]?.max) {
           case 1:
           case 2:
-            return ("UV "+ketqua33.data.forecast.daily.uvi[2].max);
+            return ("UV "+ketqua33?.data?.forecast?.daily?.uvi[2]?.max);
           case 3:
           case 4:
           case 5:
-            return ("UV "+ketqua33.data.forecast.daily.uvi[2].max);
+            return ("UV "+ketqua33?.data?.forecast?.daily?.uvi[2]?.max);
           case 6:
           case 7:
-            return ("UV "+ketqua33.data.forecast.daily.uvi[2].max);
+            return ("UV "+ketqua33?.data?.forecast?.daily?.uvi[2]?.max);
           case 8:
           case 9:
           case 10:
           case 11:
-            return ("UV "+ketqua33.data.forecast.daily.uvi[2].max);
+            return ("UV "+ketqua33?.data?.forecast?.daily?.uvi[2]?.max);
           default:
             return null;
         }
@@ -51,7 +51,7 @@ function ItemStateUv() {
       return null;
     } else {
       try {
-        switch (ketqua33.data.forecast.daily.uvi[2].max) {
+        switch (ketqua33?.data?.forecast?.daily?.uvi[2]?.max) {
           case 1:
           case 2:
             return ('Hãy mang: ô nhỏ. Tia uv ở mức thấp');

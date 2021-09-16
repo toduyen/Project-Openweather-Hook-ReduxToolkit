@@ -6,7 +6,7 @@ import { getData, getAqi } from '../../Api/GlobalApi';
 import ItemStateUv from './Views/itemStateUv';
 
 function Statecity() {
-  const dauInput = useSelector(state => state.search.value);
+  const dauInput = useSelector(state => state?.search?.value);
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getData({ local: dauInput }));

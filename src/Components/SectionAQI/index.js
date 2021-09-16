@@ -7,8 +7,8 @@ const Heading = styled(Badge)`
 font-weight: 500;
 `;
 function AQiIndexVier() {
-  const ketquaAQI = useSelector(state => state.GlobalApi.value3);
-  const trangthai = useSelector(state => state.GlobalApi.status3);
+  const ketquaAQI = useSelector(state => state?.GlobalApi?.value3);
+  const trangthai = useSelector(state => state?.GlobalApi?.status3);
   return (
     <>
       <Row>

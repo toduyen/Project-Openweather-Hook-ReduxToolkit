@@ -12,9 +12,9 @@ font-size: 15px;
 `;
 function descriptionAQI({ ketquaAQI, trangthai }) {
   const renderIcon = () => {
-    if (ketquaAQI.data.aqi) {
+    if (ketquaAQI?.data?.aqi) {
       try {
-        const AqiCN = ketquaAQI.data.aqi;
+        const AqiCN = ketquaAQI?.data?.aqi;
         switch (true) {
           case (0 <= AqiCN) && (AqiCN <= 50):
             return (
@@ -39,7 +39,7 @@ function descriptionAQI({ ketquaAQI, trangthai }) {
                       {AqiCN}
                     </Temp3>
                     <DesTemp2 className="display-6" style={{ textAlign: 'center' }}>
-                      Đo tại {ketquaAQI.data.city.name}
+                      Đo tại {ketquaAQI?.data?.city?.name}
                     </DesTemp2>
                   </div>
                 </Col>
@@ -49,7 +49,7 @@ function descriptionAQI({ ketquaAQI, trangthai }) {
                       Không khí tốt
                                         </DesTemp2>
                     <DesTemp2 className="display-6" style={{ textAlign: 'center' }}>
-                      PM2.5 | {ketquaAQI.data.iaqi.pm25.v} ug/m3
+                      PM2.5 | {ketquaAQI?.data?.iaqi?.pm25?.v} ug/m3
                                         </DesTemp2>
                   </div>
                 </Col>
@@ -78,7 +78,7 @@ function descriptionAQI({ ketquaAQI, trangthai }) {
                       {AqiCN}
                     </Temp3>
                     <DesTemp2 className="display-6" style={{ textAlign: 'center' }}>
-                      Đo tại {ketquaAQI.data.city.name}
+                      Đo tại {ketquaAQI?.data?.city?.name}
                     </DesTemp2>
                   </div>
                 </Col>
@@ -88,7 +88,7 @@ function descriptionAQI({ ketquaAQI, trangthai }) {
                       Không khí trung bình
                                         </DesTemp2>
                     <DesTemp2 className="display-6" style={{ textAlign: 'center' }}>
-                      PM2.5 | {ketquaAQI.data.iaqi.pm25.v} ug/m3
+                      PM2.5 | {ketquaAQI?.data?.iaqi?.pm25?.v} ug/m3
                                         </DesTemp2>
                   </div>
                 </Col>
@@ -116,7 +116,7 @@ function descriptionAQI({ ketquaAQI, trangthai }) {
                       {AqiCN}
                     </Temp3>
                     <DesTemp2 className="display-6" style={{ textAlign: 'center' }}>
-                      Đo tại {ketquaAQI.data.city.name}
+                      Đo tại {ketquaAQI?.data?.city?.name}
                     </DesTemp2>
                   </div>
                 </Col>
@@ -126,7 +126,7 @@ function descriptionAQI({ ketquaAQI, trangthai }) {
                       Không lành mạnh cho nhóm người nhạy cảm
                                             </DesTemp2>
                     <DesTemp2 className="display-6" style={{ textAlign: 'center' }}>
-                      PM2.5 | {ketquaAQI.data.iaqi.pm25.v} ug/m3
+                      PM2.5 | {ketquaAQI?.data?.iaqi?.pm25?.v} ug/m3
                                             </DesTemp2>
                   </div>
                 </Col>
@@ -154,7 +154,7 @@ function descriptionAQI({ ketquaAQI, trangthai }) {
                       {AqiCN}
                     </Temp3>
                     <DesTemp2 className="display-6" style={{ textAlign: 'center' }}>
-                      Đo tại {ketquaAQI.data.city.name}
+                      Đo tại {ketquaAQI?.data?.city?.name}
                     </DesTemp2>
                   </div>
                 </Col>
@@ -164,7 +164,7 @@ function descriptionAQI({ ketquaAQI, trangthai }) {
                       Có hại cho sức khỏe
                                             </DesTemp2>
                     <DesTemp2 className="display-6" style={{ textAlign: 'center' }}>
-                      PM2.5 | {ketquaAQI.data.iaqi.pm25.v} ug/m3
+                      PM2.5 | {ketquaAQI?.data?.iaqi?.pm25?.v} ug/m3
                                             </DesTemp2>
                   </div>
                 </Col>
@@ -194,7 +194,7 @@ function descriptionAQI({ ketquaAQI, trangthai }) {
                       {AqiCN}
                     </Temp3>
                     <DesTemp2 className="display-6" style={{ textAlign: 'center' }}>
-                      Đo tại {ketquaAQI.data.city.name}
+                      Đo tại {ketquaAQI?.data?.city?.name}
                     </DesTemp2>
                   </div>
                 </Col>
@@ -204,7 +204,7 @@ function descriptionAQI({ ketquaAQI, trangthai }) {
                       Rất có hại cho sức khỏe
                                             </DesTemp2>
                     <DesTemp2 className="display-6" style={{ textAlign: 'center' }}>
-                      PM2.5 | {ketquaAQI.data.iaqi.pm25.v} ug/m3
+                      PM2.5 | {ketquaAQI?.data?.iaqi?.pm25?.v} ug/m3
                                             </DesTemp2>
                   </div>
                 </Col>
@@ -232,7 +232,7 @@ function descriptionAQI({ ketquaAQI, trangthai }) {
                       {AqiCN}
                     </Temp3>
                     <DesTemp2 className="display-6" style={{ textAlign: 'center' }}>
-                      Đo tại {ketquaAQI.data.city.name}
+                      Đo tại {ketquaAQI?.data?.city?.name}
                     </DesTemp2>
                   </div>
                 </Col>
@@ -242,7 +242,7 @@ function descriptionAQI({ ketquaAQI, trangthai }) {
                       Nguy hiểm
                                             </DesTemp2>
                     <DesTemp2 className="display-6" style={{ textAlign: 'center' }}>
-                      PM2.5 | {ketquaAQI.data.iaqi.pm25.v} ug/m3
+                      PM2.5 | {ketquaAQI?.data?.iaqi?.pm25?.v} ug/m3
                                             </DesTemp2>
                   </div>
                 </Col>
