@@ -47,7 +47,7 @@ function Title() {
   const renderAws = () => {
     if (String(ketqua?.cod) === "200") {
       return (
-        <Row style={{ paddingTop: 20 }} className="d-flex justify-content-center">
+        <Row style={{ paddingTop: 20 }} className="d-flex justify-content-around">
           <Col xl="6" sm="12" className="d-flex justify-content-center pt-3 pb-3">
             <div className="imageIcon">
               <img src={ketqua2 === "Thanh cong" ? `https://openweathermap.org/img/wn/${ketqua?.weather[0]?.icon}.png` : `http://openweathermap.org/img/wn/02d.png`} style={{ width: 150 }} alt="icon" />

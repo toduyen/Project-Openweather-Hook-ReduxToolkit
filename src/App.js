@@ -6,6 +6,7 @@ import Statecity from './Components/SectionStatesCity';
 import Title from './Components/SectionTitle';
 import Forecase from './Components/SectionForecast';
 import AQiIndexVier from './Components/SectionAQI';
+import ViewChartAllDay from './Components/ViewChartAllDay';
 const DivStyled = Styled.div`
 background-image: url(${process.env.PUBLIC_URL + '/2850815.jpg'});
 /* Center and scale the image nicely */
@@ -23,6 +24,7 @@ function App() {
         <Title />
         <Forecase />
         <AQiIndexVier />
+        <ViewChartAllDay/>
       </Container>
     </DivStyled>
   );

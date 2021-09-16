@@ -14,7 +14,7 @@ function Statecity() {
   }, [dauInput, dispatch])
   return (
     <>
-      <Row>
+      <Row className="d-flex justify-content-around">
         <ItemStateCity />
         <ItemStateUv />
       </Row>
