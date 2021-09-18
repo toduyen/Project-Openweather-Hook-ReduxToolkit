@@ -17,7 +17,7 @@ const CharjsAQI = ({ketquaAQI, trangthai, thoitiet7Day, trangthaiThoitiet}) => {
                                 <Heading color="secondary">AQI (Biểu đồ chất lượng không khí toàn cảnh)</Heading>
                             </h4>
                         </Col>
-                        <Col xl="6" sm="6" className=" justify-content-center  col-6">
+                        {ketquaAQI.status === "error" ? null : <Col xl="6" sm="6" className=" justify-content-center  col-6">
                             {trangthai === "That bai" && ('Error render')}
                             {trangthai === "Loading"
                                 ? ('Loading...')
@@ -93,7 +93,8 @@ const CharjsAQI = ({ketquaAQI, trangthai, thoitiet7Day, trangthaiThoitiet}) => {
                                     ]
                                 }}/>}
                         </Col>
-
+                        }
+                        
                         <Col
                             xl="6"
                             sm="6"
