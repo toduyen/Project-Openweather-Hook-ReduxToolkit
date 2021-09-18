@@ -1,7 +1,11 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import ViewData from './ViewData';
-
+import { Col , Badge } from 'reactstrap';
+import styled from 'styled-components';
+const Heading = styled(Badge)`
+font-weight: 500;
+`;
 function ForecaseItem() {
   const ketqua = useSelector(state => state?.GlobalApi?.value2);
   const ketqua2 = useSelector(state => state?.GlobalApi?.status2);
@@ -28,6 +32,10 @@ function ForecaseItem() {
   }
   return (
     <>
+      {ketqua.cod === "404" ? null :  <Col xl="12" className="d-flex justify-content-start rounded">
+          <h4 className="headerTitle"><Heading color="secondary">Forecast</Heading></h4>
+      </Col>}
+     
       {
         thucthiHienThi()
       }

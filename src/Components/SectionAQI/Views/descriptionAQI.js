@@ -1,5 +1,5 @@
 import React from 'react';
-import { Col } from 'reactstrap';
+import { Col , Badge } from 'reactstrap';
 import styled from 'styled-components';
 const Temp3 = styled.h1`
 color: white;
@@ -9,6 +9,9 @@ font-weight: normal;
 const DesTemp2 = styled.h2`
 color: white;
 font-size: 15px;
+`;
+const Heading = styled(Badge)`
+font-weight: 500;
 `;
 function descriptionAQI({ ketquaAQI, trangthai }) {
   const renderIcon = () => {
@@ -259,8 +262,14 @@ function descriptionAQI({ ketquaAQI, trangthai }) {
       return null;
     }
   }
+  console.log(ketquaAQI);
   return (
+   
     <>
+    {ketquaAQI.status === "error" ? null :   <Col xl="12" className="d-flex justify-content-start rounded">
+                  <h4 className="headerTitle"><Heading color="secondary">AQI (Chất lượng không khí)</Heading></h4>
+                </Col>}
+   
       {trangthai === "thanhcong" ? renderIcon() : "Loading"}
     </>
   )

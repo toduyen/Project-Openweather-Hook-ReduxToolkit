@@ -1,10 +1,17 @@
 import React from 'react';
-import { Col } from 'reactstrap';
+import { Col, Badge } from 'reactstrap';
 import {Scatter} from 'react-chartjs-2';
+import styled from 'styled-components';
+const Heading = styled(Badge)`
+font-weight: 500;
+`;
 const CharjsAQI = ({thoitiet7Day,trangthaiThoitiet}) => {
     return (
         <React.Fragment>
-             <Col xl="12" sm="12" className=" justify-content-center  col-12">
+         
+          {thoitiet7Day?.cod === "404" ? null : <React.Fragment>  <Col xl="12" className="d-flex justify-content-start rounded">
+          <h4 className="headerTitle"><Heading color="secondary">Tổng quan thời tiết</Heading></h4>
+        </Col>  <Col xl="12" sm="12" className=" justify-content-center  col-12">
                  {trangthaiThoitiet === "That bai" && ('Error render')}
                  {trangthaiThoitiet === "Loading" ? ('Loading...') : <Scatter
                     data={{
@@ -31,7 +38,8 @@ const CharjsAQI = ({thoitiet7Day,trangthaiThoitiet}) => {
                           },]
                     }}
                  />}
-             </Col>
+             </Col></React.Fragment>}
+            
         </React.Fragment>
     );
 }
