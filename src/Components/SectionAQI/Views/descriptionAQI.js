@@ -262,7 +262,6 @@ function descriptionAQI({ ketquaAQI, trangthai }) {
       return null;
     }
   }
-  console.log(ketquaAQI);
   return (
    
     <>

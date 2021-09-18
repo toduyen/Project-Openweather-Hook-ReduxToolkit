@@ -16,6 +16,8 @@ font-size: 50px;
 function ItemStateUv() {
   const ketqua3 = useSelector(state => state?.GlobalApi?.status3);
   const ketqua33 = useSelector(state => state?.GlobalApi?.value3);
+
+  const ketqua = useSelector(state => state?.GlobalApi?.value);
   const renderUvIndex = () => {
     if (ketqua33.data === "Unknown station") {
       return ('');
@@ -79,8 +81,10 @@ function ItemStateUv() {
   return (
     <>
       <ColStyle2 xl="4" sm="6" className="col-6">
-        <Heading className="d-flex justify-content-start mt-4">{ketqua3 === "thanhcong" ? renderUvIndex() : "loading"}</Heading>
-        <DescriptionHeading3 className="display-6 display-6 d-flex justify-content-center mt-1">{ketqua3 === "thanhcong" ? renderAws() : "loading"}</DescriptionHeading3>
+        {ketqua?.cod === "404" ? null  : <React.Fragment>
+          <Heading className="d-flex justify-content-start mt-4">{ketqua3 === "thanhcong" ? renderUvIndex() : "loading"}</Heading>
+          <DescriptionHeading3 className="display-6 display-6 d-flex justify-content-center mt-1">{ketqua3 === "thanhcong" ? renderAws() : "loading"}</DescriptionHeading3>
+        </React.Fragment>}
       </ColStyle2>
     </>
   )
