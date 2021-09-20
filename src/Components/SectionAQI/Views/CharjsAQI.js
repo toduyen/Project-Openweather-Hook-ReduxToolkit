@@ -140,6 +140,7 @@ const CharjsAQI = ({ketquaAQI, trangthai, thoitiet7Day, trangthaiThoitiet}) => {
 CharjsAQI.propTypes = {
     ketquaAQI: PropTypes.shape({
         data: PropTypes.shape({
+            data: PropTypes.string,
             forecast: PropTypes.shape({
                 daily: PropTypes.shape({
                     uvi: PropTypes.array,
@@ -152,7 +153,7 @@ CharjsAQI.propTypes = {
     }),
     thoitiet7Day: PropTypes.shape({
         main: PropTypes.shape({
-            humidity: PropTypes.string
+            humidity: PropTypes.number
         })
     })
 }
