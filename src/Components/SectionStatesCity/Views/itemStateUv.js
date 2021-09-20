@@ -83,7 +83,7 @@ function ItemStateUv() {
   return (
     <>
       <ColStyle2 xl="4" sm="6" className="col-6">
-        {ketqua?.cod === "404" ? <Skeleton/>  : <React.Fragment>
+        {ketqua?.cod === "404" ? null : <React.Fragment>
           <Heading className="d-flex justify-content-start mt-4">{ketqua3 === "thanhcong" ? renderUvIndex() : <Skeleton/>}</Heading>
           <DescriptionHeading3 className="display-6 display-6 d-flex justify-content-center mt-1">{ketqua3 === "thanhcong" ? renderAws() : <Skeleton/>}</DescriptionHeading3>
         </React.Fragment>}
@@ -93,7 +93,6 @@ function ItemStateUv() {
 }
 ItemStateUv.propTypes = {
   ketqua33: PropTypes.shape({
-    data: PropTypes.string,
     data : PropTypes.shape({
       forecast: PropTypes.shape({
         daily: PropTypes.shape({

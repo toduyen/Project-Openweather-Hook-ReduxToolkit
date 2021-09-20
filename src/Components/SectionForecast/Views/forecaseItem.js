@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux';
 import ViewData from './ViewData';
 import { Col , Badge } from 'reactstrap';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 const Heading = styled(Badge)`
 font-weight: 500;
 `;
@@ -42,5 +43,8 @@ function ForecaseItem() {
     </>
   )
 }
-
+ForecaseItem.propTypes = {
+  list: PropTypes.array,
+  cod: PropTypes.string
+}
 export default ForecaseItem
