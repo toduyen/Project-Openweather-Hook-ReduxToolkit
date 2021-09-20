@@ -2,6 +2,7 @@ import React from 'react'
 import { useSelector } from 'react-redux';
 import { Row, Col } from 'reactstrap';
 import Styled from 'styled-components';
+import Skeleton from 'react-loading-skeleton';
 const Temp = Styled.h1`
 color: white;
 padding-left: 20px;
