@@ -2,6 +2,8 @@ import React from 'react';
 import {Col, Badge} from 'reactstrap';
 import {Line, Doughnut} from 'react-chartjs-2';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
+import Skeleton from 'react-loading-skeleton';
 const Heading = styled(Badge)`
 font-weight: 500;
 `;
@@ -20,7 +22,7 @@ const CharjsAQI = ({ketquaAQI, trangthai, thoitiet7Day, trangthaiThoitiet}) => {
                         {ketquaAQI.status === "error" ? null : <Col xl="6" sm="6" className=" justify-content-center  col-6">
                             {trangthai === "That bai" && ('Error render')}
                             {trangthai === "Loading"
-                                ? ('Loading...')
+                                ? <Skeleton/>
                                 : <Line
                                     data={{
                                     labels: ketquaAQI
@@ -104,7 +106,7 @@ const CharjsAQI = ({ketquaAQI, trangthai, thoitiet7Day, trangthaiThoitiet}) => {
                         }}>
                             {trangthaiThoitiet === "That bai" && ('Error render')}
                             {trangthaiThoitiet === "Loading"
-                                ? ('Loading...')
+                                ? <Skeleton/>
                                 : <Doughnut
                                     data={{
                                     labels: [
@@ -135,5 +137,23 @@ const CharjsAQI = ({ketquaAQI, trangthai, thoitiet7Day, trangthaiThoitiet}) => {
         </React.Fragment>
     );
 }
-
+CharjsAQI.propTypes = {
+    ketquaAQI: PropTypes.shape({
+        data: PropTypes.shape({
+            forecast: PropTypes.shape({
+                daily: PropTypes.shape({
+                    uvi: PropTypes.array,
+                    pm25: PropTypes.array,
+                    pm10: PropTypes.array,
+                    o3: PropTypes.array
+                })
+            })
+        })
+    }),
+    thoitiet7Day: PropTypes.shape({
+        main: PropTypes.shape({
+            humidity: PropTypes.string
+        })
+    })
+}
 export default CharjsAQI;

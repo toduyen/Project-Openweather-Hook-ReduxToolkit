@@ -1,6 +1,8 @@
 import React from 'react';
 import { Col , Badge } from 'reactstrap';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
+import Skeleton from 'react-loading-skeleton';
 const Temp3 = styled.h1`
 color: white;
 font-size: 40px;
@@ -265,13 +267,27 @@ function descriptionAQI({ ketquaAQI, trangthai }) {
   return (
    
     <>
-    {ketquaAQI.status === "error" ? null :   <Col xl="12" className="d-flex justify-content-start rounded">
+    {ketquaAQI.status === "error" ?  null :   <Col xl="12" className="d-flex justify-content-start rounded">
                   <h4 className="headerTitle"><Heading color="secondary">AQI (Chất lượng không khí)</Heading></h4>
                 </Col>}
    
-      {trangthai === "thanhcong" ? renderIcon() : "Loading"}
+      {trangthai === "thanhcong" ? renderIcon() :  <Skeleton/>}
     </>
   )
 }
-
+descriptionAQI.propTypes = {
+  PropTypes: PropTypes.shape({
+    data: PropTypes.shape({
+      aqi: PropTypes.string,
+      city: PropTypes.shape({
+        name: PropTypes.string
+      }),
+      iaqi: PropTypes.shape({
+        pm25: PropTypes.shape({
+          v: PropTypes.string
+        })
+      })
+    })
+  })
+}
 export default descriptionAQI
