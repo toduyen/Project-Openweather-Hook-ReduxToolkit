@@ -28,12 +28,22 @@ function ViewData({ giatri }) {
     <>
       <SetBackgroud xl="2" sm="4" className="d-flex justify-content-center pt-3 pb-3 rounded col-4">
         <div>
-          <Temp2 style={{ textAlign: 'center' }}>{renderDay(0) || <Skeleton/>}</Temp2>
-          <Temp3 style={{ textAlign: 'center' }}>{renderDay(2) || <Skeleton/>}</Temp3>
-          <DesTemp2 className="display-6" style={{ textAlign: 'center' }}>
-            <img src={`https://openweathermap.org/img/wn/${giatri?.weather[0]?.icon}.png` || <Skeleton/>} style={{ width: 50 }} alt="icon" />
-          </DesTemp2>
-          <Temp3 style={{ textAlign: 'center' }}>{Math.round(giatri?.main?.temp) || <Skeleton/>}&#8451;</Temp3>
+          {giatri?.dt_txt ? 
+              <React.Fragment>
+                <Temp2 style={{ textAlign: 'center' }}>{renderDay(0)}</Temp2>
+                <Temp3 style={{ textAlign: 'center' }}>{renderDay(2)}</Temp3> 
+               
+            </React.Fragment>
+          : <Skeleton/>}
+          {giatri?.weather[0]?.icon ?
+           <DesTemp2 className="display-6" style={{ textAlign: 'center' }}>
+           <img src={`https://openweathermap.org/img/wn/${giatri?.weather[0]?.icon}.png`} style={{ width: 50 }} alt="icon" />
+           <Temp3 style={{ textAlign: 'center' }}>{Math.round(giatri?.main?.temp)}&#8451;</Temp3>
+            </DesTemp2>
+         : <Skeleton/>}
+
+               
+               
         </div>
       </SetBackgroud>
     </>

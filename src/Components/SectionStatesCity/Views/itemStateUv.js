@@ -16,12 +16,10 @@ color: white;
 font-size: 50px;
 `;
 function ItemStateUv() {
-  const ketqua3 = useSelector(state => state?.GlobalApi?.status3);
   const ketqua33 = useSelector(state => state?.GlobalApi?.value3);
-
   const ketqua = useSelector(state => state?.GlobalApi?.value);
   const renderUvIndex = () => {
-    if (ketqua33.data === "Unknown station") {
+    if (ketqua33?.data === "Unknown station") {
       return <Skeleton/>;
     } else {
       try {
@@ -51,7 +49,7 @@ function ItemStateUv() {
     }
   }
   const renderAws = () => {
-    if (ketqua33.data === "Unknown station") {
+    if (ketqua33?.data === "Unknown station") {
       return <Skeleton/>;
     } else {
       try {
@@ -84,8 +82,8 @@ function ItemStateUv() {
     <>
       <ColStyle2 xl="4" sm="6" className="col-6">
         {ketqua?.cod === "404" ? null : <React.Fragment>
-          <Heading className="d-flex justify-content-start mt-4">{ketqua3 === "thanhcong" ? renderUvIndex() : <Skeleton/>}</Heading>
-          <DescriptionHeading3 className="display-6 display-6 d-flex justify-content-center mt-1">{ketqua3 === "thanhcong" ? renderAws() : <Skeleton/>}</DescriptionHeading3>
+        {<Heading className="d-flex justify-content-start mt-4"> {renderUvIndex()} </Heading> || <Skeleton/>}
+        {<DescriptionHeading3 className="display-6 display-6 d-flex justify-content-center mt-1"> {renderAws()} </DescriptionHeading3> || <Skeleton/>}
         </React.Fragment>}
       </ColStyle2>
     </>
