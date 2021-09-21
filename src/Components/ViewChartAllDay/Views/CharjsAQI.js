@@ -2,6 +2,8 @@ import React from 'react';
 import { Col, Badge } from 'reactstrap';
 import {Scatter} from 'react-chartjs-2';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
+import Skeleton from 'react-loading-skeleton';
 const Heading = styled(Badge)`
 font-weight: 500;
 `;
@@ -13,7 +15,7 @@ const CharjsAQI = ({thoitiet7Day,trangthaiThoitiet}) => {
           <h4 className="headerTitle"><Heading color="secondary">Tổng quan thời tiết</Heading></h4>
         </Col>  <Col xl="12" sm="12" className=" justify-content-center  col-12">
                  {trangthaiThoitiet === "That bai" && ('Error render')}
-                 {trangthaiThoitiet === "Loading" ? ('Loading...') : <Scatter
+                 {trangthaiThoitiet === "Loading" ?  <Skeleton/> : <Scatter
                     data={{
                         labels: thoitiet7Day?.list?.map(value => {return(value?.dt_txt)}),
                           datasets: [{
@@ -43,5 +45,11 @@ const CharjsAQI = ({thoitiet7Day,trangthaiThoitiet}) => {
         </React.Fragment>
     );
 }
- 
+CharjsAQI.propTypes = {
+  thoitiet7Day: PropTypes.shape({
+    cod: PropTypes.string,
+    list: PropTypes.array
+  }),
+  trangthaiThoitiet: PropTypes.string
+}
 export default CharjsAQI;
