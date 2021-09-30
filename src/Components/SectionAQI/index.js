@@ -1,8 +1,8 @@
 import React from 'react'
 import { useSelector } from 'react-redux';
 import { Row } from 'reactstrap';
-import CharjsAQI from './Views/CharjsAQI';
 import DescriptionAQI from './Views/descriptionAQI';
+const CharjsAQI = React.lazy(() => import('./Views/CharjsAQI'));
 function AQiIndexVier() {
   const ketquaAQI = useSelector(state => state?.GlobalApi?.value3);
   const trangthai = useSelector(state => state?.GlobalApi?.status3);

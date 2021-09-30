@@ -1,8 +1,7 @@
-import React from 'react'
+import React, { Suspense } from 'react'
 import { useSelector } from 'react-redux';
 import { Row } from 'reactstrap';
-
-import CharjsAQI from './Views/CharjsAQI';
+const CharjsAQI = React.lazy(() => import('./Views/CharjsAQI'));
 
 function AQiIndexVier() {
   const thoitiet7Day = useSelector(state => state?.GlobalApi?.value2);
@@ -10,8 +9,9 @@ function AQiIndexVier() {
   return (
     <>
       <Row className="d-flex justify-content-around">
-       
-        <CharjsAQI thoitiet7Day={thoitiet7Day} trangthaiThoitiet={trangthaiThoitiet}/>
+        <Suspense fallback={<p>Loading...</p>}>
+          <CharjsAQI thoitiet7Day={thoitiet7Day} trangthaiThoitiet={trangthaiThoitiet}/>
+        </Suspense>
       </Row>
     </>
   )

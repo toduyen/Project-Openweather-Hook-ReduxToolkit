@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { Row } from 'reactstrap';
-import ForecaseItem from './Views/forecaseItem';
 import { getDataFiveDay } from '../../Api/GlobalApi';
+const ForecaseItem = React.lazy(() => import('./Views/forecaseItem'));
 function Forecase() {
   const ketquatimkiem = useSelector(state => state.search.value);
   const dispatch = useDispatch();
